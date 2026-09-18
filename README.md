@@ -1,11 +1,29 @@
-<div align="center">
+# SARAH™ — 30th Birthday Experience
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+Vercel-ready Next.js/React/TypeScript prototype based on the supplied birthday build documents.
 
-  <h1>Built with AI Studio</h2>
+## Run
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+```bash
+npm install
+npm run dev
+```
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## Forecast photos
 
-</div>
+Add the four files below when you have them:
+
+- `public/images/sarah-30.jpg`
+- `public/images/sarah-40.jpg`
+- `public/images/sarah-50.jpg`
+- `public/images/sarah-69.jpg`
+
+The experience shows a clearly marked forecast plate placeholder until the image is present.
+
+## Notes
+
+- No backend, database, analytics or AI API.
+- Answers persist to `localStorage` under `sarah-30th-v1`.
+- Q30 is feedback only.
+- Dataset B is kept out of visible UI components, but as client-side code it is inspectable; that is acceptable for this birthday prototype.
+- The supplied docs do not specify option vectors for the 3 unseen model-test questions, so those vectors are hand-authored in `lib/model.ts` and kept deterministic.
