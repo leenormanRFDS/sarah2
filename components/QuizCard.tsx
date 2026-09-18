@@ -72,12 +72,12 @@ export default function QuizCard({ question, qIndex, total, selectedOptionId, on
       <h2>{question.question}</h2>
       
       <div className="answers">
-        {question.options.map(o => {
+        {question.options.map((o, i) => {
           const isSelected = selectedOptionId === o.id;
           const isDimmed = phase !== 'IDLE' && !isSelected;
           return (
             <button 
-              key={o.id} 
+              key={`ans-${o.id}-${i}`} 
               className={`${isSelected ? 'selected' : ''} ${isDimmed ? 'dimmed' : ''}`} 
               onClick={() => handleSelect(o.id)} 
               disabled={!!selectedOptionId || phase !== 'IDLE'}
